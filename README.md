@@ -64,8 +64,8 @@ Things you may want to cover:
 ## messagesテーブル
 |Column|Type|Options|
 |------|----|-------|
-|message|text|null: false, foreign_key: true|
-|image|string|null: false, foreign_key: true|
+|message|text||
+|image|string||
 |user_id|integer|null: false,foreign_key: true|
 |group_id|integer|null: false, foreign_key: true|
 
