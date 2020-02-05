@@ -42,46 +42,105 @@
   }
 }
 
-.main-bar {
+.main {
   height: 100vh;
   width: calc(100vw - 300px);
-  .chat-main-group-info{
+  &__group{
     height: 100px;
     background-color: #ffffff;
     border-bottom: 1px solid #eeeeee;
     display: flex;
     justify-content: space-between;
     padding: 0 40px;
-    .group-info-name{
+    &__info{
       padding-top: 35px;
       color: #333333;
-      .info-name{
+      &__name{
         font-size: 20px;
         padding-bottom: 15px;
       }
-      .info-menber{
+      &__menber{
         font-size: 12px;
       }
     }
-    .group-info-edit-btn
-    {
-      font-size: 16px;
-      color: #38aef0;
-      border: 1px solid;
-      margin: 28px 0 32px 0;
-      padding: 6px 20px 0;
-      .edit-btn{
+    &__edit{
+      &__btn{
+        display: block;
+        margin-top: 28px;
+        padding: 0 20px;
+        border: 1px solid;
+        height: 40px;
+        font-size:20px;
+        color:#38aef0;
         text-decoration: none;
-        color: #38aef0;
+        line-height: 40px;
       }
     }
   }
-  .chat-main__message-list{
+  &__list{
     height: calc(100vh - 190px);
     background-color: #fafafa;
+    &__name{
+      padding: 35px 0 12px 40px;;
+      display: flex;
+      font-size: 16px;
+      color: #333333;
+      &__day{
+        font-size: 12px;
+        padding-left: 5px;
+        color: #999999;
+      }
+    }
+    &__message{
+      padding: 0 0 46px 40px;
+      font-size: 14px;
+      color: #434a54;
+    }
   }
-  .chat-main-message-form {
+  &__form {
     height: 90px;
     background-color: #d2d2d2;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    &__list{
+      background-color: white;
+      height: 50px;
+      width: calc(100% - 105px);
+      margin-left: 50px;
+      display: flex;
+      position: relative;
+      &__message{
+        position: absolute;
+        line-height: 50px;
+        padding-left: 10px;
+      }
+      &__icon{
+        position: absolute ;
+        line-height: 50px;
+        right: 0;
+        margin: 0 0 0 auto;
+        padding-right: 10px;
+
+        &__image{
+          cursor: pointer;
+          display: inline-block;
+          input{
+            display: none;
+          }
+        }
+      }
+    }
+    &__btn{
+      margin:0 40px 0 15px;
+      display: block;
+      padding: 0 20px;
+      border: 1px solid #38aef0;
+      height: 50px;
+      color:white;
+      background-color: #38aef0;
+      text-decoration: none;
+      line-height: 50px;
+    }
   }
 }
