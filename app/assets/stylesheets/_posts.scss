@@ -1,9 +1,16 @@
+//変数の宣言
+$mainWhiteCollor: #ffffff;
+
+//index.html.hamlの呼び出し
 .wrapper {
   display: flex;
 }
+
+//サイドバーの実装
 .side-bar{
   height: 100vh;
   width: 300px;
+  //サイドヘッダーの実装
   .side-header {
     height: 100px;
     background-color: #253141;
@@ -12,18 +19,19 @@
     align-items: center;
     padding: 0 20px;
     .name{
-      color: #ffffff;
+      color: $mainWhiteCollor;
       font-size: 16px;
       font-weight: bold;
     }
     .top-items-icons{
       .top-items-icon{
-        color: #ffffff;
+        color: $mainWhiteCollor;
         padding-left: 5px;
         text-decoration: none;
       }
     }
   }
+  //サイドグループリストの実装
   .group-lists {
     overflow: scroll;
     height:calc(100vh - 100px);
@@ -31,7 +39,7 @@
     padding: 0 20px;
     .group{
       padding: 20px 0 40px 0;
-      color: #ffffff;
+      color: $mainWhiteCollor;
       &__name{
         font-size: 15px;
         padding-bottom: 5px;
@@ -43,9 +51,11 @@
   }
 }
 
+//メインバーの実装
 .main {
   height: 100vh;
   width: calc(100vw - 300px);
+  //メインヘッダーの実装「
   .header{
     height: 100px;
     border-bottom: 1px solid #eeeeee;
@@ -77,6 +87,7 @@
       }
     }
   }
+  //メッセージリストの実装
   .list{
     overflow: scroll;
     height: calc(100vh - 190px);
@@ -98,6 +109,7 @@
       color: #434a54;
     }
   }
+  //投稿フォームの実装
   .form {
     height: 90px;
     background-color: #d2d2d2;
@@ -129,7 +141,7 @@
     .send-btn{
       margin:0 40px 0 15px;
       padding: 0 20px;
-      color:white;
+      color: $mainWhiteCollor;
       background-color: #38aef0;
       text-decoration: none;
       line-height: 50px;
