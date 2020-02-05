@@ -4,14 +4,14 @@
 .side-bar{
   height: 100vh;
   width: 300px;
-  .side-bar-user-name {
+  .side-header {
     height: 100px;
     background-color: #253141;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0 20px;
-    .top-items-name{
+    .name{
       color: #ffffff;
       font-size: 16px;
       font-weight: bold;
@@ -19,23 +19,24 @@
     .top-items-icons{
       .top-items-icon{
         color: #ffffff;
-        padding: 0 0 0 5px;
+        padding-left: 5px;
         text-decoration: none;
       }
     }
   }
-  .side-bar-group-list {
+  .group-lists {
+    overflow: scroll;
     height:calc(100vh - 100px);
     background-color: #2f3e51;
     padding: 0 20px;
-    .list-groups{
+    .group{
       padding: 20px 0 40px 0;
       color: #ffffff;
-      .group-list-name{
+      &__name{
         font-size: 15px;
         padding-bottom: 5px;
       }
-      .group-list-message{
+      &__message{
         font-size: 11px;
       }
     }
@@ -45,14 +46,13 @@
 .main {
   height: 100vh;
   width: calc(100vw - 300px);
-  &__group{
+  .header{
     height: 100px;
-    background-color: #ffffff;
     border-bottom: 1px solid #eeeeee;
     display: flex;
     justify-content: space-between;
     padding: 0 40px;
-    &__info{
+    .group-info{
       padding-top: 35px;
       color: #333333;
       &__name{
@@ -63,8 +63,8 @@
         font-size: 12px;
       }
     }
-    &__edit{
-      &__btn{
+    &__btn{
+      &__edit{
         display: block;
         margin-top: 28px;
         padding: 0 20px;
@@ -77,7 +77,8 @@
       }
     }
   }
-  &__list{
+  .list{
+    overflow: scroll;
     height: calc(100vh - 190px);
     background-color: #fafafa;
     &__name{
@@ -97,46 +98,37 @@
       color: #434a54;
     }
   }
-  &__form {
+  .form {
     height: 90px;
     background-color: #d2d2d2;
     display: flex;
-    align-items: center;
     justify-content: space-between;
-    &__list{
-      background-color: white;
+    align-items: center;
+    &__messages{
+      width: 100%;
       height: 50px;
-      width: calc(100% - 105px);
       margin-left: 50px;
       display: flex;
       position: relative;
-      &__message{
-        position: absolute;
-        line-height: 50px;
-        padding-left: 10px;
+      .message{
+        width: 100%;
+        border-style: none;
+        padding: 0 40px 0 10px;
+        height: 100%;
       }
-      &__icon{
-        position: absolute ;
+      .img-icon{
+        position: absolute;
+        right: 20px;
         line-height: 50px;
-        right: 0;
-        margin: 0 0 0 auto;
-        padding-right: 10px;
-
-        &__image{
-          cursor: pointer;
-          display: inline-block;
-          input{
+        cursor: pointer;
+        input{
             display: none;
-          }
         }
       }
     }
-    &__btn{
+    .send-btn{
       margin:0 40px 0 15px;
-      display: block;
       padding: 0 20px;
-      border: 1px solid #38aef0;
-      height: 50px;
       color:white;
       background-color: #38aef0;
       text-decoration: none;

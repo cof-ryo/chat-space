@@ -1,41 +1,38 @@
 .main
-  .main__group
-    %ul.main__group__info
-      %li.main__group__info__name< info-name 
-      %li.main__group__info__menber< Menber : masa
-    .main__group__edit
-      = link_to "#", class: "main__group__edit__btn" do
+  .header
+    %ul.group-info
+      %li.group-info__name< info-name 
+      %li.group-info__menber< Menber : masa
+    .header__btn
+      = link_to "#", class: "header__btn__edit" do
         Edit 
-  .main__list
-    .main__list__name
+  .list
+    .list__name
       name 
-      .main__list__name__day
+      .list__name__day
         2019-01-01(wed) 17:43:01
-    .main__list__message
+    .list__message
       おはよう
 
-    .main__list__name
+    .list__name
       name 
-      .main__list__name__day
+      .list__name__day
         2019-01-01(wed) 17:43:01
-    .main__list__message
+    .list__message
       おはよう
     
-    .main__list__name
+    .list__name
       name 
-      .main__list__name__day
+      .list__name__day
         2019-01-01(wed) 17:43:01
-    .main__list__message
+    .list__message
       おはよう
       
-  .main__form
-    .main__form__list
-      .main__form__list__message
-        %input{type: "text", placeholder: "type a message"}
-        
-      .main__form__list__icon
-        %label{class: "main__form__list__icon__image"}
-          = icon('fas', 'image')
-          %input{type: "file"}
-    = link_to "#", class: "main__form__btn" do
+  .form
+    .form__messages
+      %input{type: "text", placeholder: "type a message", class: "message"}
+      %label{class: "img-icon"}
+        = icon('fas', 'image')
+        %input{type: "file"}
+    = link_to "#", class: "send-btn" do
       Send
