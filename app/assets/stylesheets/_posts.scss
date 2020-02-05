@@ -1,0 +1,150 @@
+//変数の宣言
+$mainWhiteCollor: #ffffff;
+
+//index.html.hamlの呼び出し
+.wrapper {
+  display: flex;
+}
+
+//サイドバーの実装
+.side-bar{
+  height: 100vh;
+  width: 300px;
+  //サイドヘッダーの実装
+  .side-header {
+    height: 100px;
+    background-color: #253141;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    .name{
+      color: $mainWhiteCollor;
+      font-size: 16px;
+      font-weight: bold;
+    }
+    .top-items-icons{
+      .top-items-icon{
+        color: $mainWhiteCollor;
+        padding-left: 5px;
+        text-decoration: none;
+      }
+    }
+  }
+  //サイドグループリストの実装
+  .group-lists {
+    overflow: scroll;
+    height:calc(100vh - 100px);
+    background-color: #2f3e51;
+    padding: 0 20px;
+    .group{
+      padding: 20px 0 40px 0;
+      color: $mainWhiteCollor;
+      &__name{
+        font-size: 15px;
+        padding-bottom: 5px;
+      }
+      &__message{
+        font-size: 11px;
+      }
+    }
+  }
+}
+
+//メインバーの実装
+.main {
+  height: 100vh;
+  width: calc(100vw - 300px);
+  //メインヘッダーの実装「
+  .header{
+    height: 100px;
+    border-bottom: 1px solid #eeeeee;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 40px;
+    .group-info{
+      padding-top: 35px;
+      color: #333333;
+      &__name{
+        font-size: 20px;
+        padding-bottom: 15px;
+      }
+      &__menber{
+        font-size: 12px;
+      }
+    }
+    &__btn{
+      &__edit{
+        display: block;
+        margin-top: 28px;
+        padding: 0 20px;
+        border: 1px solid;
+        height: 40px;
+        font-size:20px;
+        color:#38aef0;
+        text-decoration: none;
+        line-height: 40px;
+      }
+    }
+  }
+  //メッセージリストの実装
+  .list{
+    overflow: scroll;
+    height: calc(100vh - 190px);
+    background-color: #fafafa;
+    &__name{
+      padding: 35px 0 12px 40px;;
+      display: flex;
+      font-size: 16px;
+      color: #333333;
+      &__day{
+        font-size: 12px;
+        padding-left: 5px;
+        color: #999999;
+      }
+    }
+    &__message{
+      padding: 0 0 46px 40px;
+      font-size: 14px;
+      color: #434a54;
+    }
+  }
+  //投稿フォームの実装
+  .form {
+    height: 90px;
+    background-color: #d2d2d2;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &__messages{
+      width: 100%;
+      height: 50px;
+      margin-left: 50px;
+      display: flex;
+      position: relative;
+      .message{
+        width: 100%;
+        border-style: none;
+        padding: 0 40px 0 10px;
+        height: 100%;
+      }
+      .img-icon{
+        position: absolute;
+        right: 20px;
+        line-height: 50px;
+        cursor: pointer;
+        input{
+            display: none;
+        }
+      }
+    }
+    .send-btn{
+      margin:0 40px 0 15px;
+      padding: 0 20px;
+      color: $mainWhiteCollor;
+      background-color: #38aef0;
+      text-decoration: none;
+      line-height: 50px;
+    }
+  }
+}

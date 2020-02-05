@@ -1,0 +1,38 @@
+.main
+  .header
+    %ul.group-info
+      %li.group-info__name< info-name 
+      %li.group-info__menber< Menber : masa
+    .header__btn
+      = link_to "#", class: "header__btn__edit" do
+        Edit 
+  .list
+    .list__name
+      name 
+      .list__name__day
+        2019-01-01(wed) 17:43:01
+    .list__message
+      おはよう
+
+    .list__name
+      name 
+      .list__name__day
+        2019-01-01(wed) 17:43:01
+    .list__message
+      おはよう
+    
+    .list__name
+      name 
+      .list__name__day
+        2019-01-01(wed) 17:43:01
+    .list__message
+      おはよう
+      
+  .form
+    .form__messages
+      %input{type: "text", placeholder: "type a message", class: "message"}
+      %label{class: "img-icon"}
+        = icon('fas', 'image')
+        %input{type: "file"}
+    = link_to "#", class: "send-btn" do
+      Send
