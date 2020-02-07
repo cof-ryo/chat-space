@@ -1,38 +1,31 @@
 .main
   .header
     %ul.group-info
-      %li.group-info__name< info-name 
-      %li.group-info__menber< Menber : masa
+      %li.group-info__name
+        = @group.name
+      %li.group-info__menber
+        - @group.group_users.each do |group_users|
+          = group_users.user.name
     .header__btn
-      = link_to "#", class: "header__btn__edit" do
+      = link_to edit_group_path(@group), class: "header__btn__edit" do
         Edit 
   .list
     .list__name
-      name 
+      -@messages.each do |message|
+        = message.content
       .list__name__day
-        2019-01-01(wed) 17:43:01
+        -@messages.each do |message|
+          = message.created_at
     .list__message
-      おはよう
-
-    .list__name
-      name 
-      .list__name__day
-        2019-01-01(wed) 17:43:01
-    .list__message
-      おはよう
-    
-    .list__name
-      name 
-      .list__name__day
-        2019-01-01(wed) 17:43:01
-    .list__message
-      おはよう
+      -@messages.each do |message|
+        = message.content
       
   .form
-    .form__messages
-      %input{type: "text", placeholder: "type a message", class: "message"}
-      %label{class: "img-icon"}
-        = icon('fas', 'image')
-        %input{type: "file"}
-    = link_to "#", class: "send-btn" do
-      Send
+    = form_for [@group, @message]  do |f|
+      .form__messages
+        .div
+          = f.text_field :content, class: 'message',placeholder: 'type a message'
+          = f.label :image, class: "img-icon" do
+            = icon('fas', 'image')
+            =f.file_field :image
+        = f.submit 'Send', class: 'send-btn'
