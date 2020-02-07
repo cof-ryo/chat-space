@@ -39,13 +39,17 @@ $mainWhiteCollor: #ffffff;
     padding: 0 20px;
     .group{
       padding: 20px 0 40px 0;
-      color: $mainWhiteCollor;
+      text-decoration: none;
       &__name{
         font-size: 15px;
         padding-bottom: 5px;
+        
+        color: $mainWhiteCollor;
       }
       &__message{
         font-size: 11px;
+        color: $mainWhiteCollor;
+        
       }
     }
   }
@@ -114,37 +118,44 @@ $mainWhiteCollor: #ffffff;
     height: 90px;
     background-color: #d2d2d2;
     display: flex;
-    justify-content: space-between;
     align-items: center;
     &__messages{
-      width: 100%;
+      width: calc(100vw - 300px);
       height: 50px;
-      margin-left: 50px;
       display: flex;
-      position: relative;
-      .message{
+      justify-content: space-between;
+      .div{
+        position: relative;
+        margin-left: 50px;
         width: 100%;
-        border-style: none;
-        padding: 0 40px 0 10px;
-        height: 100%;
-      }
-      .img-icon{
-        position: absolute;
-        right: 20px;
-        line-height: 50px;
-        cursor: pointer;
-        input{
-            display: none;
+        .message{
+          border-style: none;
+          padding: 0 40px 0 10px;
+          height: 100%;
+          width: 100%;
+        }
+        .img-icon{
+          position: absolute;
+          right: 20px;
+          line-height: 50px;
+          cursor: pointer;
+          input{
+              display: none;
+          }
         }
       }
-    }
-    .send-btn{
-      margin:0 40px 0 15px;
-      padding: 0 20px;
-      color: $mainWhiteCollor;
-      background-color: #38aef0;
-      text-decoration: none;
-      line-height: 50px;
+      .send-btn{
+        margin:0 40px 0 15px;
+        padding: 0 20px;
+        color: $mainWhiteCollor;
+        background-color: #38aef0;
+        text-decoration: none;
+        line-height: 50px;
+      }
     }
   }
+}
+
+.field_with_errors {
+  display: contents;
 }
