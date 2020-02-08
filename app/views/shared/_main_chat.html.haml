@@ -10,15 +10,15 @@
       = link_to edit_group_path(@group), class: "header__btn__edit" do
         Edit 
   .list
-    .list__name
-      -@messages.each do |message|
-        = message.content
-      .list__name__day
-        -@messages.each do |message|
-          = message.created_at
-    .list__message
-      -@messages.each do |message|
-        = message.content
+    - @messages.each do |message|
+      .list__name
+        = message.user.name
+        .list__name__day
+          = message.created_at.strftime("%Y年%m月%d日 %H時%M分")
+      .list__message
+        - if message.content.present?
+          = message.content
+        = image_tag message.image.url, class: 'list__message__image' if message.image.present?
       
   .form
     = form_for [@group, @message]  do |f|
