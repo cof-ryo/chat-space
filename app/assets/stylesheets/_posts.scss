@@ -111,6 +111,10 @@ $mainWhiteCollor: #ffffff;
       padding: 0 0 46px 40px;
       font-size: 14px;
       color: #434a54;
+      &__image{
+        width:200px;
+      }
+
     }
   }
   //投稿フォームの実装
