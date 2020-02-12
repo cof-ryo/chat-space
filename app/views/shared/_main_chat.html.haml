@@ -18,6 +18,7 @@
       .list__message
         - if message.content.present?
           = message.content
+          %br 
         = image_tag message.image.url, class: 'list__message__image' if message.image.present?
       
   .form
