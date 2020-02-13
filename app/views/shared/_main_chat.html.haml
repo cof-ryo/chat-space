@@ -11,7 +11,7 @@
         Edit 
   .list
     - @messages.each do |message|
-      .list__group
+      .list__group{data: {message: {id: message.id}}}
         .list__group__name
           = message.user.name
           .list__group__name__day
