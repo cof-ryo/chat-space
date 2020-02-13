@@ -52,7 +52,7 @@ $(function(){
       }
     })
     .fail(function(){
-      console.log('error');
+      alert("メッセージ更新に失敗しました");
     })
   }
 
