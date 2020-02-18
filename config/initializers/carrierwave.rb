@@ -12,6 +12,6 @@ CarrierWave.configure do |config|
     region: 'ap-northeast-1'
   }
 
-  config.fog_directory  = 'chatspace2020-ryo'
-  config.asset_host = 'https://s3-ap-northeast-1.amazonaws.com/ここにバケット名を入れます'
+  config.fog_directory  = 'chatspace-2020-ryo'
+  config.asset_host = 'https://s3-ap-northeast-1.amazonaws.com/chatspace-2020-ryo'
 end
